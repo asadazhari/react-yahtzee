@@ -13,6 +13,7 @@ class Game extends Component {
       dice: Array.from({ length: NUM_DICE }),
       locked: Array(NUM_DICE).fill(false),
       rollsLeft: NUM_ROLLS,
+      rolling: false,
       scores: {
         ones: undefined,
         twos: undefined,
@@ -79,6 +80,7 @@ class Game extends Component {
               dice={this.state.dice}
               locked={this.state.locked}
               handleClick={this.toggleLocked}
+              disabled={this.state.rollsLeft === 0}
             />
             <div className="Game-button-wrapper">
               <button

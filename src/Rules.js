@@ -126,33 +126,33 @@ const sixes = new TotalOneNumber({
 // three/four of kind score as sum of all dice
 const threeOfKind = new SumDistro({
   count: 3,
-  description: "	If 3+ of one value, score sum of all dice (otherwise, score 0)",
+  description: "	If 3+ of one value, score sum of all dice",
 });
 const fourOfKind = new SumDistro({
   count: 4,
-  description: "	If 4+ of one value, score sum of all dice (else 0)",
+  description: "	If 4+ of one value, score sum of all dice",
 });
 
 // full house scores as flat 25
 const fullHouse = new FullHouse({
   score: 25,
-  description: "If 3 of one value and 2 of another, score 25 (else 0)",
+  description: "If 3 of one value and 2 of another, score 25 ",
 });
 
 // small/large straights score as 30/40
 const smallStraight = new SmallStraight({
   score: 40,
-  description: "If 4+ values in a row, score 30 (else 0)",
+  description: "If 4+ values in a row, score 30",
 });
 const largeStraight = new LargeStraight({
   score: 40,
-  description: "If 5 values in a row, score 40 (else 0)",
+  description: "If 5 values in a row, score 40",
 });
 
 // yahtzee scores as 50
 const yahtzee = new Yahtzee({
   score: 50,
-  description: "If all values match, score 50 (else 0)",
+  description: "If all values match, score 50",
 });
 
 // for chance, can view as some of all dice, requiring at least 0 of a kind
